@@ -1,225 +1,205 @@
-﻿# MIC Employee Leave Management System (MIC-ELMS)
+# 🚀 MIC – Employee Leave Management System (MIC-ELMS)
 
-![MIC-ELMS Logo](./frontend/src/logo/image.png)
-<br>
-**Live Link**: https://mic-employee-leave-management-syste-ebon.vercel.app/
-<br>
-**Demo Credentials:** 
-<br>
-**Email :** admin@mic.edu
-<br>
-**Password:** password123
-## 📱 Mobile-Friendly Employee Leave Management System
+🔗 **Live Demo:**  
+https://mic-employee-leave-management-syste-ebon.vercel.app/
 
-A comprehensive and responsive web application for managing employee leave requests, designed specifically for educational institutions. The system features role-based access control with separate interfaces for administrators, department heads (HODs), and employees.
-
-[![Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black)](https://mic-employee-leave-management-syste-ebon.vercel.app/)
-[![MongoDB](https://img.shields.io/badge/MongoDB-4.4+-green)](https://www.mongodb.com/)
-[![Express](https://img.shields.io/badge/Express-4.18.2-blue)](https://expressjs.com/)
-[![React](https://img.shields.io/badge/React-18.2.0-61dafb)](https://reactjs.org/)
-[![Node.js](https://img.shields.io/badge/Node.js-18.0+-green)](https://nodejs.org/)
-
-## 🌟 Features
-
-### User Authentication & Management
-- Secure JWT-based authentication system
-- Role-based access control (Admin, HOD, Employee)
-- Profile management with avatar upload
-- Password reset functionality
-
-### Leave Management
-- Intuitive leave application interface
-- Document attachment support
-- Multi-level approval workflow (HOD → Admin)
-- Real-time status updates
-- Leave balance tracking by category
-
-### Department Administration
-- Department-wise employee management
-- HOD assignment and management
-- Department-specific leave policies
-
-### Analytics & Reporting
-- Dashboard with key metrics and visualizations
-- Excel report export functionality
-- Customizable date range filtering
-- Leave statistics by department and category
-
-### Mobile Optimization
-- Responsive design for all device sizes
-- Mobile-optimized navigation
-- Touch-friendly UI components
-- Adaptive tables for small screens
-
-## 🏗️ System Architecture
-
-### Frontend
-- **Framework**: React 18 with hooks and context API
-- **Routing**: React Router 6
-- **Styling**: Tailwind CSS with custom components
-- **State Management**: Context API with local storage persistence
-- **HTTP Client**: Axios with interceptors
-
-### Backend
-- **Server**: Node.js with Express
-- **Database**: MongoDB Atlas with Mongoose ODM
-- **Authentication**: JWT with secure HTTP-only cookies
-- **File Storage**: Base64 encoding for profile pictures and attachments
-- **API Documentation**: Swagger UI (available at /api-docs endpoint)
-
-## 🚀 Getting Started
-
-### Prerequisites
-- Node.js (v18 or higher)
-- MongoDB (local or Atlas connection)
-- npm or yarn
-
-### Installation
-
-#### Clone the repository
-```bash
-git clone https://github.com/yourusername/MIC-ELMS.git
-cd MIC-ELMS
-```
-
-#### Backend Setup
-```bash
-# Navigate to backend directory
-cd backend
-
-# Install dependencies
-npm install
-
-# Create config.env file in the backend directory with the following variables:
-# PORT=5000
-# MONGODB_URI=your_mongodb_connection_string
-# JWT_SECRET=your_jwt_secret_key
-# JWT_EXPIRE=30d
-# NODE_ENV=development
-
-# Run database seeder (optional, for test data)
-npm run seed
-
-# Start backend server
-npm start
-```
-
-#### Frontend Setup
-```bash
-# Navigate to frontend directory from project root
-cd frontend
-
-# Install dependencies
-npm install
-
-# Start development server
-npm run dev
-```
-
-### Default Admin Credentials
+🔐 **Demo Credentials**
 ```
 Email: admin@mic.edu
 Password: password123
 ```
 
-## 📱 Mobile Responsiveness
+---
 
-MIC-ELMS is fully responsive across all device sizes:
+## 📌 Project Overview
 
-- **Desktop**: Full-featured interface with optimized layouts
-- **Tablet**: Adapted navigation and card layouts
-- **Mobile**: Touch-optimized buttons, collapsible tables, and custom navigation
+MIC-ELMS is a scalable, full-stack Employee Leave Management System designed for educational institutions.  
 
-Key mobile features include:
-- Custom mobile navigation menu
-- Responsive data tables that adapt to screen size
-- Touch-friendly form inputs and buttons
-- Optimized dashboard layout for small screens
+The platform streamlines leave workflows through a structured multi-level approval system (HOD → Admin), ensuring transparency, accountability, and real-time tracking.
 
-## 🔐 Security Features
+Built with modern web technologies, the system emphasizes security, responsiveness, and maintainable architecture.
 
-- JWT token authentication with automatic renewal
+---
+
+## 🌟 Core Features
+
+### 🔐 Secure Authentication & Authorization
+- JWT-based authentication (HTTP-only cookies)
+- Role-Based Access Control (Admin, HOD, Employee)
+- Password reset functionality
+- Profile management with avatar upload
+
+### 📝 Leave Application System
+- Intuitive leave request interface
+- Document upload support
+- Multi-level approval workflow
+- Real-time leave status updates
+- Leave balance tracking by category
+
+### 🏢 Department Management
+- Department-wise employee management
+- HOD assignment and updates
+- Department-specific leave policies
+
+### 📊 Analytics & Reporting
+- Interactive dashboard with key metrics
+- Department & category-wise analytics
+- Custom date range filtering
+- Excel report export functionality
+
+### 📱 Fully Responsive Design
+- Optimized for Desktop, Tablet, and Mobile
+- Adaptive data tables
+- Mobile-first navigation
+- Touch-friendly UI components
+
+---
+
+## 🏗️ Technical Architecture
+
+### 🖥️ Frontend
+- **React 18** (Hooks + Context API)
+- **React Router v6**
+- **Tailwind CSS**
+- **Axios with Interceptors**
+- Context-based global state management
+
+### ⚙️ Backend
+- **Node.js + Express.js**
+- **MongoDB Atlas (Mongoose ODM)**
+- **JWT Authentication**
+- **Helmet.js (Security Headers)**
+- **Rate Limiting & Input Validation**
+- **Swagger API Documentation**
+
+---
+
+## 🔄 System Workflow
+
+### 👩‍💼 Employee
+Apply for leave → Upload documents → Track approval status
+
+### 👨‍🏫 HOD
+Review department requests → Approve or reject → Forward to Admin
+
+### 🏢 Admin
+Final approval → Manage users & departments → Generate reports
+
+---
+
+## 🔐 Security Implementation
+
 - Password hashing using bcrypt
-- Protected routes on both frontend and backend
-- CORS protection with whitelisted origins
-- Rate limiting to prevent brute force attacks
-- Input validation and sanitization
-- Security headers with Helmet.js
+- JWT authentication with expiration
+- Protected frontend & backend routes
+- CORS configuration with allowed origins
+- Rate limiting against brute-force attacks
+- Input sanitization and validation
+- Secure HTTP headers via Helmet
 
-## 🚢 Deployment
+---
 
-### Vercel Deployment
+## 🚀 Installation Guide
 
-The application is configured for deployment on Vercel:
+### 1️⃣ Clone Repository
+```bash
+git clone https://github.com/yourusername/MIC-ELMS.git
+cd MIC-ELMS
+```
 
-1. **Backend Deployment**
-   - Vercel.json configuration included for serverless functions
-   - API routes optimized for serverless architecture
-   - CORS configured for secure cross-origin requests
+---
 
-2. **Frontend Deployment**
-   - Build optimized for production with Vite
-   - Environment variables for API connections
-   - Configured for static site hosting
+### 2️⃣ Backend Setup
+```bash
+cd backend
+npm install
+```
 
-### Environment Variables
+Create `.env` file inside backend:
 
-#### Backend (.env or config.env)
 ```
 PORT=5000
 MONGODB_URI=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret
 JWT_EXPIRE=30d
-NODE_ENV=production
+NODE_ENV=development
 CORS_ORIGIN=your_frontend_url
 ```
 
-#### Frontend (.env)
+Run backend:
+```bash
+npm start
+```
+
+(Optional) Seed sample data:
+```bash
+npm run seed
+```
+
+---
+
+### 3️⃣ Frontend Setup
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+Create `.env` file inside frontend:
+
 ```
 VITE_API_URL=your_backend_api_url
 ```
 
-## 📊 API Documentation
+---
 
-The MIC-ELMS API provides the following main endpoints:
+## 📡 API Structure
 
-- **Authentication**: `/api/auth` - Login, register, profile
-- **Users**: `/api/users` - User management
-- **Leaves**: `/api/leaves` - Leave application and approval
-- **Departments**: `/api/departments` - Department management
-- **Dashboard**: `/api/dashboard` - Analytics and statistics
-- **Excel**: `/api/excel` - Report generation
+| Module | Endpoint |
+|--------|----------|
+| Authentication | `/api/auth` |
+| Users | `/api/users` |
+| Leaves | `/api/leaves` |
+| Departments | `/api/departments` |
+| Dashboard | `/api/dashboard` |
+| Excel Reports | `/api/excel` |
 
-## 🧪 Testing
+---
 
-```bash
-# Run backend tests
-cd backend
-npm test
+## 🚢 Deployment
 
-# Run frontend tests
-cd frontend
-npm test
-```
+- **Frontend:** Vercel (Vite Production Build)
+- **Backend:** Serverless-compatible configuration
+- **Database:** MongoDB Atlas (Cloud)
 
-## 🔄 Workflow
+Environment variables are securely managed for production deployment.
 
-1. **Employee**: Submits leave application → Uploads supporting documents → Views status
-2. **HOD**: Reviews department leave requests → Approves/Rejects → Manages department employees
-3. **Admin**: Final approval of leave requests → Manages all employees → Configures system settings → Generates reports
+---
 
-## 🤝 Contributing
+## 🛠️ Technology Stack
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+- React
+- Node.js
+- Express.js
+- MongoDB
+- Tailwind CSS
+- JWT
+- Axios
+- Swagger
 
-## 👨‍💻 Developers
+---
 
-- Team MIC - Developed for educational institutions to streamline leave management processes
+## 🎯 Resume-Ready Highlights
 
+- Developed a full-stack leave management platform with multi-level approval logic.
+- Implemented secure JWT authentication with role-based access control.
+- Designed a responsive UI using Tailwind CSS.
+- Built an analytics dashboard with Excel export functionality.
+- Deployed production-ready application using Vercel and MongoDB Atlas.
 
+---
 
+## 👨‍💻 Developed By
 
+Team MIC  
+Built to modernize and simplify institutional leave management systems.
