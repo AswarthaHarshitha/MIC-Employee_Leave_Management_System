@@ -1,0 +1,136 @@
+/* Dashboard Statistics Card Styles */
+.dashboard-stat-card {
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 1.25rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  min-width: 240px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+}
+
+.dashboard-stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.stat-icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+
+/* Icon background colors based on stat type */
+.employees-icon {
+  background-color: var(--mic-deep-blue);
+  color: white;
+}
+
+.hods-icon {
+  background-color: var(--mic-logo-yellow);
+  color: var(--mic-black);
+}
+
+.pending-icon {
+  background-color: var(--mic-logo-yellow);
+  color: var(--mic-black);
+}
+
+.approved-icon {
+  background-color: var(--mic-logo-green);
+  color: white;
+}
+
+.rejected-icon {
+  background-color: var(--mic-bright-red);
+  color: white;
+}
+
+.stat-content {
+  flex: 1;
+}
+
+.stat-label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--mic-gray-600);
+  margin-bottom: 0.25rem;
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--mic-black);
+  line-height: 1;
+}
+
+/* Enhanced Responsive adjustments */
+@media (max-width: 768px) {
+  .dashboard-stat-card {
+    min-width: 100%;
+    padding: 1rem;
+  }
+  
+  .stat-icon-container {
+    width: 48px;
+    height: 48px;
+  }
+  
+  .stat-value {
+    font-size: 1.75rem;
+  }
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 640px) {
+  .dashboard-stat-card {
+    padding: 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+  
+  .stat-icon-container {
+    margin-bottom: 0.75rem;
+    margin-right: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+  }
+  
+  .stat-icon-container svg {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .stat-label {
+    font-size: 0.875rem;
+  }
+  
+  .stat-value {
+    font-size: 1.5rem;
+    margin-top: 0.25rem;
+  }
+  
+  /* Improve touch target sizes */
+  .dashboard-stat-card.clickable {
+    position: relative;
+  }
+  
+  .dashboard-stat-card.clickable::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    min-height: 44px;
+  }
+}
